@@ -2,8 +2,8 @@
 
 ## Project Description
 
-## Description of the Command Interpreter
+## Description of the Command Interpreter 
 
-### How to start it
+### How to start using the console
 ### How to use it
 ### Examples
