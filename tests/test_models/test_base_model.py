@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Tests for the user
+Test suits for amenities
 """
 import unittest
 
 
-class TestUser(unittest.TestCase):
+class TestBaseModel(unittest.TestCase):
     """
     Tests for state
     """

@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-Tests for the user
+Test suits for city
 """
 import unittest
 
 
-class TestUser(unittest.TestCase):
+class TestCity(unittest.TestCase):
     """
-    Tests for state
+    Tests for city
     """
 
-    def test_name(self):
+    def test_city(self):
         """
         Tests for name inputs
         """

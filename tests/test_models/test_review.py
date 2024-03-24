@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Tests for the user
+Tests for review
 """
 import unittest
 
 
-class TestUser(unittest.TestCase):
+class TestReview(unittest.TestCase):
     """
-    Tests for state
+    Test case for review
     """
 
     def test_name(self):

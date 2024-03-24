@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Tests for the user
+Tests for state
 """
 import unittest
 
 
-class TestUser(unittest.TestCase):
+class TestState(unittest.TestCase):
     """
     Tests for state
     """

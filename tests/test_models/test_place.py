@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Tests for the user
+Test suits for amenities
 """
 import unittest
 
 
-class TestUser(unittest.TestCase):
+class TestPlace(unittest.TestCase):
     """
-    Tests for state
+    Tests for place
     """
 
     def test_name(self):
