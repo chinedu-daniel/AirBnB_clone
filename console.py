@@ -29,7 +29,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Empty line + ENTER should not execute anything
         """
-        pass
+        return False
 
     def do_create(self, input):
         """
