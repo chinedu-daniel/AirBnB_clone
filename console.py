@@ -25,11 +25,11 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def do_emptyline(self):
+    def emptyline(self):
         """
         Empty line + ENTER should not execute anything
         """
-        return False
+        pass
 
     def do_create(self, input):
         """
