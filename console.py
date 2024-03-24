@@ -5,6 +5,7 @@ Console.py is a python command interpreter
 
 import cmd
 import models
+import re
 
 
 class HBNBCommand(cmd.Cmd):
@@ -143,6 +144,18 @@ class HBNBCommand(cmd.Cmd):
             models.storage.save()
         else:
             print("** no instance found **")
+
+    def default(self, line):
+        """
+        Catch-all for commands that do not match do_* commands.
+        """
+        # Match pattern <class name>.all()
+        match = re.match(r'^(\w+)\.all\(\)$', line)
+        if match:
+            class_name = match.group(1)
+            self.do_all(class_name)
+        else:
+            print("*** Unknown syntax: {}".format(line))
 
 
 if __name__ == '__main__':
