@@ -145,15 +145,29 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
+    def count_instances(self, class_name):
+        """
+        Counts instances of a specific class.
+        """
+        count = 0
+        for instance in models.storage.all().values():
+            if instance.__class__.__name__ == class_name:
+                count += 1
+        print(count)
+
     def default(self, line):
         """
         Catch-all for commands that do not match do_* commands.
         """
         # Match pattern <class name>.all()
-        match = re.match(r'^(\w+)\.all\(\)$', line)
-        if match:
-            class_name = match.group(1)
+        all_match = re.match(r'^(\w+)\.all\(\)$', line)
+        count_match = re.match(r'^(\w+)\.count\(\)$', line)
+        if all_match:
+            class_name = all_match.group(1)
             self.do_all(class_name)
+        elif count_match:
+            class_name = count_match.group(1)
+            self.count_instances(class_name)
         else:
             print("*** Unknown syntax: {}".format(line))
 
