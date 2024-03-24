@@ -164,7 +164,6 @@ class HBNBCommand(cmd.Cmd):
         count_match = re.match(r'^(\w+)\.count\(\)$', line)
         show_match = re.match(r'^(\w+)\.show\("(.+)"\)$', line)
         destroy_match = re.match(r'^(\w+)\.destroy\("(.+)"\)$', line)
-        update_match = re.match(r'^(\w+)\.update\("(\w+)", "([^"]+)","([^"]+)"\)$', line)
         if all_match:
             class_name = all_match.group(1)
             self.do_all(class_name)
@@ -177,11 +176,6 @@ class HBNBCommand(cmd.Cmd):
         elif destroy_match:
             class_name, instance_id = destroy_match.groups()
             self.do_destroy(f'{class_name} {instance_id}')
-        elif update_match:
-            class_name, instance_id,
-            attribute_name, attribute_value = update_match.groups()
-            self.do_update(class_name, instance_id,
-                           attribute_name, attribute_value)
         else:
             print("*** Unknown syntax: {}".format(line))
 
